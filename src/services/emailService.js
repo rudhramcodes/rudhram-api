@@ -7,6 +7,7 @@ const transporter = nodemailer.createTransport({
   port: smtp.port,
   secure: smtp.port === 465,
   auth: { user: smtp.user, pass: smtp.pass },
+  family: 4,
   connectionTimeout: 10000,
   greetingTimeout: 10000,
   socketTimeout: 20000,
