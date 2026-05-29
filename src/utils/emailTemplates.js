@@ -78,10 +78,10 @@ const fieldRow = (label, value, alt) => `
 `;
 
 /* ════════════════════════════════════════
-   TEAM NOTIFICATION — new enquiry arrives
+   TEAM NOTIFICATION — new inquiry arrives
    ════════════════════════════════════════ */
 const teamNotificationHtml = ({ name, email, interest, message, submittedAt }) => shell(`
-  <h2 style="font-size:18px;font-weight:700;color:${BRAND.ink};margin:0 0 4px">New enquiry received</h2>
+  <h2 style="font-size:18px;font-weight:700;color:${BRAND.ink};margin:0 0 4px">New inquiry received</h2>
   <p style="margin:0 0 24px;font-size:13px;color:${BRAND.stone}">${interest} &middot; ${submittedAt}</p>
 
   <table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;border-radius:8px;overflow:hidden;border:1px solid ${BRAND.ivory}">
@@ -102,14 +102,14 @@ const teamNotificationHtml = ({ name, email, interest, message, submittedAt }) =
    ════════════════════════════════════════ */
 const autoReplyHtml = (name) => shell(`
   <h2 style="font-size:20px;font-weight:700;color:${BRAND.ink};margin:0 0 4px">Thank you for reaching out</h2>
-  <p style="margin:0 0 24px;font-size:14px;color:${BRAND.stone}">We&rsquo;ve received your enquiry</p>
+  <p style="margin:0 0 24px;font-size:14px;color:${BRAND.stone}">We&rsquo;ve received your inquiry</p>
 
   <p style="margin:0 0 16px;font-size:15px;line-height:1.8;color:${BRAND.ink}">
     Dear ${name},
   </p>
 
   <p style="margin:0 0 16px;font-size:15px;line-height:1.8;color:${BRAND.ink}">
-    Thank you for contacting <strong>Rudhram Enterprises</strong>. We have received your enquiry and will review it personally.
+    Thank you for contacting <strong>Rudhram Enterprises</strong>. We have received your inquiry and will review it personally.
   </p>
 
   <table cellpadding="0" cellspacing="0" style="width:100%;margin:24px 0;background:${BRAND.ivory};border-radius:8px">

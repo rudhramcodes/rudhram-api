@@ -14,7 +14,7 @@ const sendTeamNotification = async (inquiry) => {
     from: `"Rudhram Contact" <${fromEmail}>`,
     to: teamEmail,
     replyTo: inquiry.email,
-    subject: `New enquiry: ${inquiry.name} — ${inquiry.interest}`,
+    subject: `New Inquiry: ${inquiry.name} — ${inquiry.interest}`,
     html: teamNotificationHtml({
       name: inquiry.name,
       email: inquiry.email,

@@ -31,7 +31,7 @@ const submitContact = async (req, res, next) => {
     res.status(201).json({
       ok: true,
       message:
-        "Your enquiry has been received. We will respond within 48 hours.",
+        "Your Inquiry has been received. We will respond within 48 hours.",
     });
   } catch (err) {
     next(err);

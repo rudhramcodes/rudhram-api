@@ -23,7 +23,7 @@ const inquirySchema = new mongoose.Schema(
       enum: {
         values: [
           "Partnership",
-          "Venture enquiry",
+          "Venture inquiry",
           "Collaboration",
           "Social impact",
         ],
