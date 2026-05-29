@@ -13,7 +13,7 @@ const validateContact = (req, res, next) => {
   }
   const validInterests = [
     "Partnership",
-    "Venture Inquiry",
+    "Venture inquiry",
     "Collaboration",
     "Social impact",
   ];
