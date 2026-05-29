@@ -8,6 +8,9 @@ const errorHandler = require("./src/middleware/errorHandler");
 
 const app = express();
 
+// ── Trust proxy (Render / production) ──
+app.set('trust proxy', 1);
+
 // ── Security & parsing ──
 app.use(helmet());
 app.use(cors({ origin: corsOrigin }));
