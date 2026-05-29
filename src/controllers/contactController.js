@@ -24,8 +24,16 @@ const submitContact = async (req, res, next) => {
         }).exec();
       }),
     ]).catch((err) => {
-      console.error("Email send error:", err.message);
-      // Non-blocking — don't fail the request
+      console.error("Email send error:", {
+        message: err.message,
+        code: err.code,
+        errno: err.errno,
+        syscall: err.syscall,
+        command: err.command,
+        response: err.response,
+        responseCode: err.responseCode,
+        stack: err.stack,
+      });
     });
 
     res.status(201).json({
