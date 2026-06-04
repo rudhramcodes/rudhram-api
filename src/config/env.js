@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const required = ['MONGODB_URI', 'TEAM_EMAIL', 'FROM_EMAIL'];
+const required = ['MONGODB_URI', 'TEAM_EMAIL', 'FROM_EMAIL', 'BREVO_API_KEY'];
 for (const key of required) {
   if (!process.env[key]) {
     console.error(`Missing required env var: ${key}`);
@@ -14,6 +14,7 @@ module.exports = {
   teamEmail: process.env.TEAM_EMAIL,
   fromEmail: process.env.FROM_EMAIL,
   nodeEnv: process.env.NODE_ENV || 'development',
+  brevoApiKey: process.env.BREVO_API_KEY,
   corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:5173',
   smtp: {
     host: process.env.SMTP_HOST,
