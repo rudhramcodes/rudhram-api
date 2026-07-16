@@ -32,11 +32,12 @@ const sendTeamNotification = async (inquiry) => {
     fromName: 'Rudhram Contact',
     to: teamEmail,
     replyTo: inquiry.email,
-    subject: `New Inquiry: ${inquiry.name} — ${inquiry.interest}`,
+    subject: `New Inquiry: ${inquiry.name}`,
     html: teamNotificationHtml({
       name: inquiry.name,
       email: inquiry.email,
-      interest: inquiry.interest,
+      phone: inquiry.phone,
+      countryCode: inquiry.countryCode,
       message: inquiry.message,
       submittedAt: inquiry.createdAt
         ? new Date(inquiry.createdAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })

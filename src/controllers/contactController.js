@@ -9,7 +9,8 @@ const submitContact = async (req, res, next) => {
     const inquiry = await Inquiry.create({
       name: req.body.name,
       email: req.body.email,
-      interest: req.body.interest,
+      phone: req.body.phone,
+      countryCode: req.body.countryCode,
       message: req.body.message,
     });
 

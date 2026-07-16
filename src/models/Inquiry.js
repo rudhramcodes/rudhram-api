@@ -17,18 +17,16 @@ const inquirySchema = new mongoose.Schema(
       match: [/^\S+@\S+\.\S+$/, "Invalid email format"],
     },
 
-    interest: {
+    phone: {
       type: String,
-      required: [true, "Interest is required"],
-      enum: {
-        values: [
-          "Partnership",
-          "Venture inquiry",
-          "Collaboration",
-          "Social impact",
-        ],
-        message: "{VALUE} is not a valid interest",
-      },
+      required: [true, "Phone number is required"],
+      trim: true,
+    },
+
+    countryCode: {
+      type: String,
+      required: [true, "Country code is required"],
+      trim: true,
     },
 
     message: {
